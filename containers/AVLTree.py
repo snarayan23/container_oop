@@ -74,13 +74,13 @@ class AVLTree(BST):
         '''
         if node is None or node.right is None:
             return node
-        newRoot = Node(node.right.value)
-        newRoot.right = node.right.right
-        newRoot.left = Node(node.value)
-        newRoot.left.left = node.left
-        newRoot.left.right = node.right.left
+        new_root = Node(node.right.value)
+        new_root.right = node.right.right
+        new_root.left = Node(node.value)
+        new_root.left.left = node.left
+        new_root.left.right = node.right.left
 
-        return newRoot
+        return new_root
 
     @staticmethod
     def _right_rotate(node):
