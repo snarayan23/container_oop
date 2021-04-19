@@ -96,13 +96,13 @@ class AVLTree(BST):
         '''
         if node is None or node.left is None:
             return node
-        newRoot = Node(node.left.value)
-        newRoot.left = node.left.left
-        newRoot.right = Node(node.value)
-        newRoot.right.left = node.left.right
-        newRoot.right.right = node.right
+        new_root = Node(node.left.value)
+        new_root.left = node.left.left
+        new_root.right = Node(node.value)
+        new_root.right.left = node.left.right
+        new_root.right.right = node.right
 
-        return newRoot
+        return new_root
 
     def insert(self, value):
         '''
